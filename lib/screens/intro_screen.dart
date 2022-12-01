@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_focus/shared/bottom_nav_bar.dart';
 import 'package:weather_focus/shared/menu_drawer.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -9,6 +10,7 @@ class IntroScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('D Fitness')),
       drawer: const MenuDrawer(),
+      bottomNavigationBar: const MenuBottomNavigation(),
       body: Container(
         padding: const EdgeInsets.all(16),
         child: const Center(
