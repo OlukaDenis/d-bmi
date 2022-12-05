@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:weather_focus/components/custom_text_field.dart';
 
+import '../components/custom_image_field.dart';
 import '../shared/bottom_nav_bar.dart';
 import '../shared/menu_drawer.dart';
 import '../utils/string_extensions.dart';
@@ -73,6 +74,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       }
                     },
                   ),
+
+                  CustomImageFormField(
+                    validator: (val) {
+                      if (val == null) return 'Pick a picture';
+                    },
+                    onChanged: (file) {},
+                  ),
+
                   ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
